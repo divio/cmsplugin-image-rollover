@@ -11,8 +11,8 @@
 {% addtoblock "css" %}
 <style>
     .image-rollover { position: relative; }
-    .image-rollover > div { position: absolute; z-index: 0; }
-    .image-rollover > .rollover-cover { z-index: 100; }
+    .image-rollover > .rollover-cover { position: absolute; z-index: 100; }
+    .image-rollover > .rollover-under { z-index: 0; }
     .image-rollover:hover > .rollover-cover { display: none; }
 </style>
 {% endaddtoblock %}
