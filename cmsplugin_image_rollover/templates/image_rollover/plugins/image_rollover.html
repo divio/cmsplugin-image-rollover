@@ -1,0 +1,18 @@
+{% load cms_tags sekizai_tags %}
+
+<div id="image_rollover_{{ instance.pk }}" class="image-rollover">
+    {% for plugin in instance.child_plugin_instances %}
+        <div class="{% if not forloop.counter0 %}rollover-cover{% else %}rollover-under{% endif %}">
+        {% render_plugin plugin %}
+        </div>
+    {% endfor %}
+</div>
+
+{% addtoblock "css" %}
+<style>
+    .image-rollover { position: relative; }
+    .image-rollover > div { position: absolute; z-index: 0; }
+    .image-rollover > .rollover-cover { z-index: 100; }
+    .image-rollover:hover > .rollover-cover { display: none; }
+</style>
+{% endaddtoblock %}

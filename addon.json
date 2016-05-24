@@ -1,0 +1,7 @@
+{
+	"package-name": "cmsplugin-image-rollover",
+	"installed-apps": [
+		"cmsplugin_image_rollover"
+	]
+}
+
